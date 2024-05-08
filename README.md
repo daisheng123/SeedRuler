@@ -43,7 +43,7 @@ For softwares this project depends on, Java, Mysql,tomcat and Nginx are signific
 To install Java:<br>
 
 Go to the Oracle official website to download the latest version of Java JDK: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
-Install Java JDK: Follow the instructions on the download page to complete the installation. After the installation is complete, set the JAVA_HOME environment variable to point to the installation directory of JDK.<br>
+Install Java JDK: Follow the instructions on the download page to complete the installation. After the installation is complete, set the `JAVA_HOME` environment variable to point to the installation directory of JDK.<br>
 
 To install MySQL:<br>
 
@@ -54,8 +54,8 @@ To install Tomcat:<br>
 
 Go to the Apache Tomcat official website to download the latest version of Tomcat: https://tomcat.apache.org/download-10.cgi
 Extract the Tomcat archive: Unzip the downloaded Tomcat archive to the directory where you want to install it.
-Configure Tomcat: Depending on your requirements, you can modify Tomcat's configuration files, such as server.xml and web.xml.
-Start Tomcat: In the command line, navigate to the "bin" directory of Tomcat and execute the startup command, such as startup.sh (Linux) or startup.bat (Windows).
+Configure Tomcat: Depending on your requirements, you can modify Tomcat's configuration files, such as `server.xml` and `web.xml`.
+Start Tomcat: In the command line, navigate to the `bin` directory of Tomcat and execute the startup command, such as `startup.sh` (Linux) or `startup.bat` (Windows).
 
 
 ## Usage - 用法（用法。）
