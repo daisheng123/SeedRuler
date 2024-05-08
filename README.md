@@ -39,14 +39,17 @@ For more required packages, please refer to the [requirements.txt](https://githu
 
 ## Installation 
 For softwares this project depends on, Java, Mysql,tomcat and Nginx are significant.<br>
+
 To install Java:<br>
 
 Go to the Oracle official website to download the latest version of Java JDK: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 Install Java JDK: Follow the instructions on the download page to complete the installation. After the installation is complete, set the JAVA_HOME environment variable to point to the installation directory of JDK.<br>
+
 To install MySQL:<br>
 
 Go to the MySQL official website to download the latest version of MySQL database: https://dev.mysql.com/downloads/mysql/
-Install MySQL database: Follow the instructions on the download page to complete the installation. During the installation process, set the password for the root user and configure other options as needed.
+Install MySQL database: Follow the instructions on the download page to complete the installation. During the installation process, set the password for the root user and configure other options as needed.<br>
+
 To install Tomcat:<br>
 
 Go to the Apache Tomcat official website to download the latest version of Tomcat: https://tomcat.apache.org/download-10.cgi
