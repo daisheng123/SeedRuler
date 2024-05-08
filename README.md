@@ -42,7 +42,7 @@ For softwares this project depends on, Java, Mysql,tomcat and Nginx are signific
 To install Java:<br>
 
 Go to the Oracle official website to download the latest version of Java JDK: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
-Install Java JDK: Follow the instructions on the download page to complete the installation. After the installation is complete, set the JAVA_HOME environment variable to point to the installation directory of JDK.
+Install Java JDK: Follow the instructions on the download page to complete the installation. After the installation is complete, set the JAVA_HOME environment variable to point to the installation directory of JDK.<br>
 To install MySQL:<br>
 
 Go to the MySQL official website to download the latest version of MySQL database: https://dev.mysql.com/downloads/mysql/
