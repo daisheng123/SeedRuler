@@ -8,7 +8,8 @@ We are dedicated to the in-depth exploration of automated evaluation of rice see
 ### CUDA Environment
 If you are running this project using GPU, please configure CUDA and cuDNN according to this version.<br/>
 
-|  ||Version|
+|    || Version |
+| ---- || ---- |
 |CUDA||11.8|
 
 
