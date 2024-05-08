@@ -6,11 +6,10 @@ We are dedicated to the in-depth exploration of automated evaluation of rice see
 ## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
 ### CUDA Environment
-If you are running this project using GPU, please configure CUDA and cuDNN according to this version.<br/>
-
-|    || Version |
-| ---- || ---- |
-|CUDA||11.8|
+If you are running this project using GPU, please configure CUDA and cuDNN according to this version.<br/
+|     | Version  |
+|  ----  | ----  |
+| CUDA  | 11.8 |
 
 
 ## Configuration - 配置（配置信息。）
