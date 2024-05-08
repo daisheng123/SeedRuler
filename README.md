@@ -64,7 +64,7 @@ Start Tomcat: In the command line, navigate to the `bin` directory of Tomcat and
 ### Contact 
 If you have any questions, requests, or comments, we kindly invite you to contact us at dlphenomics@163.com.
 
-> [!NOTE]
+> [!IMPORTANT]
 > It is important to replace the address in the code with your own address, otherwise it may result in an error.
 
 
