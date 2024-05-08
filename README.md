@@ -1,1 +1,1 @@
-# SeedRule
+# SeedRuler
