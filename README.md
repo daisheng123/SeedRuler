@@ -1,7 +1,11 @@
 # SeedRuler
 
-## Introduction 
-We are dedicated to the in-depth exploration of automated evaluation of rice seed germination rate and provide a variety of pre-trained models. Our commitment lies in delivering fast, accurate, and convenient automated measurements to researchers and breeding institutions, offering robust support for their research endeavors.This is the documentation for SeedRuler, a deep learning web service based on JAVA and Layui. SeedRuler is freely accessible for all users. This website provides the function of high-precision measurement of rice seed germination and seed size.
+We are dedicated to the in-depth exploration of automated evaluation of rice seed germination rate and provide a variety of pre-trained models. Our commitment lies in delivering fast, accurate, and convenient automated measurements to researchers and breeding institutions, offering robust support for their research endeavors.
+
+## The structure of this project
+This is the documentation for SeedRuler, a deep learning web service based on JAVA and Layui. SeedRuler is freely accessible for all users. This website provides the function of high-precision measurement of rice seed germination and seed size.<br>
+The structure is as follows:<br>
+--templates
 
 ## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
