@@ -5,10 +5,14 @@ We are dedicated to the in-depth exploration of automated evaluation of rice see
 ## The structure of this project
 This is the documentation for SeedRuler, a deep learning web service based on JAVA and Layui. SeedRuler is freely accessible for all users. This website provides the function of high-precision measurement of rice seed germination and seed size.<br>
 The structure is as follows:<br>
-### --JavaProject
+#### --JavaProject
       This project includes a Java backend for the website system and a frontend framework using Layui. It visualizes deep learning models and algorithms, allowing users to interact with various functionalities through a visual interface.
 
-### --pythonProject
+#### --pythonProject
+
+      This project focuses on training and prediction using deep learning models. By inputting the dataset of grains into the neural network, the model extracts features of the grains for iterative training, resulting in the final SeedRuler model for prediction.
+
+      
 
 ## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
