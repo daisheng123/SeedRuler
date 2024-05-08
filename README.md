@@ -58,7 +58,7 @@ Configure Tomcat: Depending on your requirements, you can modify Tomcat's config
 Start Tomcat: In the command line, navigate to the `bin` directory of Tomcat and execute the startup command, such as `startup.sh` (Linux) or `startup.bat` (Windows).
 
 
-## Usage - 用法（用法。）
+## Usage 
 👉 We have refactored SeedRuler and added features such as training our own dataset and using pre-trained deep learning models for prediction. Please read https://u263790-ad15-4e65cb7d.westc.gpuhub.com:8443/IMSFGM/tutorial.jsp for more information.
 
 ### Contact 
