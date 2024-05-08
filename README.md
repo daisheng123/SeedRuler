@@ -24,7 +24,7 @@ This project is based on Python 3.8. The required environment is as follows:<br>
 | fvcore  |  |
 | scipy  | 1.4.1 |
 
-For more required packages, please refer to the requirements.txt file in this project.
+For more required packages, please refer to the [requirements.txt]() file in this project.
 
 
 ## Configuration - 配置（配置信息。）
