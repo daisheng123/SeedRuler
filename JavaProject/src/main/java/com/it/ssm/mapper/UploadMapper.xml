@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间 引入那个接口 -->
+<mapper namespace="com.it.ssm.dao.UploadDao">
+	<!--方法名与ID必须一致 -->
+	<!--parameterType 传入参数类型 -->
+	<!--resultType 返回值类型 -->
+	<insert id="upload" parameterType="java.util.List" >
+	 insert into images(imageName,imageUrl,algorithm) values
+	 <foreach collection="list" item="list" index="index" separator=",">
+			(#{list.imageName},#{list.imageUrl},#{list.algorithm})
+		</foreach>
+	</insert>
+	
+	<insert id="phenotypemeasure"  parameterType="java.util.List">
+	 insert into corn_phenotype(imageId,cornId,width,heigth) values
+	 <foreach collection="list" item="list" index="index" separator=",">
+			(#{imageId},#{list.cornId},#{list.width},#{list.heigth})
+		</foreach>
+	</insert>
+	
+	<insert id="countmeasure">
+	 insert into corn_count(imageId,cornId,count) values(#{imageId},#{cornId},#{count})
+	</insert>
+	
+	<insert id="germinatemeasure"  parameterType="java.util.List">
+	 insert into corn_germinate(imageId,sumCount,germinationCount,germinationRate,nogerminationCount) values
+	 <foreach collection="list" item="list" index="index" separator=",">
+			 (#{imageId},#{list.sumCount},#{list.germinationCount},#{list.germinationRate},#{list.germinationCount})
+		</foreach>
+	
+	</insert>
+
+    <select id="getImageId" parameterType="java.lang.String" resultType="Integer">
+     select id from images where imageName=#{imageUrl} ORDER BY id DESC LIMIT 1;
+    </select>
+	
+
+</mapper>

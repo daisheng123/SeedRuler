@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc"  
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans    
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd    
+                        http://www.springframework.org/schema/context    
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd    
+                        http://www.springframework.org/schema/aop 
+		                http://www.springframework.org/schema/aop/spring-aop-4.1.xsd 
+                        http://www.springframework.org/schema/mvc                  
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+                        
+<!-- 使用注解式注入 -->
+	<context:annotation-config />
+  <!-- 自动扫描 -->
+    <context:component-scan base-package="com.it.ssm"/>
+    <!-- 引入配置文件：1.2.3.4..-->
+    <!-- 1.jdbc数据库连接配置 -->
+    <bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="location" value="classpath:jdbc.properties"/>
+    </bean>  
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  
+        destroy-method="close">  
+        <property name="driverClassName" value="${driver}" />  
+        <property name="url" value="${url}" />  
+        <property name="username" value="${username}" />  
+        <property name="password" value="${password}" />  
+        <!-- 初始化连接大小 -->  
+        <property name="initialSize" value="${initialSize}"></property>  
+        <!-- 连接池最大数量 -->  
+        <property name="maxActive" value="${maxActive}"></property>  
+        <!-- 连接池最大空闲 -->  
+        <property name="maxIdle" value="${maxIdle}"></property>  
+        <!-- 连接池最小空闲 -->  	
+        <property name="minIdle" value="${minIdle}"></property>  
+        <!-- 获取连接最大等待时间 -->  
+        <property name="maxWait" value="${maxWait}"></property>  
+    </bean>
+    <!-- <bean id="dataSource_second" class="org.apache.commons.dbcp.BasicDataSource"  
+        destroy-method="close">  
+        <property name="driverClassName" value="${driver_2}" />  
+        <property name="url" value="${url_2}" />  
+        <property name="username" value="${username}" />  
+        <property name="password" value="${password}" />  
+    </bean> -->
+    <!-- <bean id="dataSource" class="com.it1404.lc.util.MultipleDataSource">
+	默认使用docapp数据库
+		<property name="defaultTargetDataSource" ref="dataSource"></property>
+		<property name="targetDataSources">
+			<map>
+				<entry key="dataSource_first" value-ref="dataSource_first"></entry>
+				<entry key="dataSource_second" value-ref="dataSource_second"></entry>
+			</map>
+		</property>
+	</bean> -->
+    
+    <!-- 2.spring+mybatis结合 -->
+    <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
+        <property name="dataSource" ref="dataSource" /> 
+                         <!-- 自动扫描mapping文件 -->
+        <property name="mapperLocations" value="classpath:com/it/ssm/mapper/*.xml"></property>
+    </bean>
+    
+    <!-- 3. spring+dao 配置(spring-dao.xml)  -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	 	<!--basePackage指定要扫描的包，在此包之下的映射器都会被搜索到。
+		 可指定多个包，包与包之间用逗号或分号分隔-->
+		<property name="basePackage" value="com.it.ssm.dao"/>
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+	</bean>
+	
+	<!-- 4.事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	 
+	 <!-- 切面 -->
+	<!-- <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<bean id="dataSourceAspect" class="com.it1404.lc.util.DataSourceAspect"></bean>
+		<aop:config>
+			<aop:aspect ref="dataSourceAspect">
+				拦截所有service方法，在dao层添加注解
+				<aop:pointcut expression="execution(* com.it1404.lc.dao..*.*(..))" id="dataSourcePointcut"/>
+				<aop:before method="intercept" pointcut-ref="dataSourcePointcut"/>
+			</aop:aspect>
+		</aop:config> -->
+	 
+ </beans>

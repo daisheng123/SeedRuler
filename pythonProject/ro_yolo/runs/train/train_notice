@@ -1,0 +1,31 @@
+exp  size_yong_150 no JPEG(没有正确分训练集和测试集，不要)
+640 重叠200
+
+exp2  size_yong_150 conclude JPEG
+640 重叠300
+
+exp3 size_yong_150 conclude JPEG
+640 重叠200
+
+exp4 size_yong_150 conclude JPEG
+640 重叠250
+
+exp5 size_yong_150 conclude JPEG
+640 重叠150
+
+exp6 size_zhu_300 conclude JPEG
+640 重叠150
+
+
+exp7 size_yong_270 conclude JPEG
+640 重叠250
+python train_rotation.py --data data/voc-new.yaml --cfg models/yolov5s-new.yaml --weights weights/yolov5s.pt --batch-size 32 --epochs 100
+
+exp8 size_yong_370 conclude JPEG
+640 重叠250
+python train_rotation.py --data data/voc-new.yaml --cfg models/yolov5s-new.yaml --weights weights/yolov5s.pt --batch-size 32 --epochs 100
+
+
+
+
+

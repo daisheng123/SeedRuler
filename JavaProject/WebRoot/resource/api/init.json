@@ -1,0 +1,96 @@
+{
+  "homeInfo": {
+    "title": "Home",
+    "href": "resource/page/corn-phenotype.jsp"
+  },
+  "logoInfo": {
+    "title": "SeedRuler",
+    "image": "resource/images/favicon.png",
+    "href": ""
+},
+  "menuInfo": [
+    {
+      "title": "General management",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "Data",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            
+            {
+              "title": "Size",
+              "href": "resource/page/statistics-phenotype.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "Germination",
+              "href": "resource/page/statistics-germinate.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+       {
+          "title":"Size",
+          "href": "",
+          "icon": "fa fa-flag-o",
+          "target": "_self",
+          "child": [
+           
+            {
+              "title": "DL measuring",
+              "href": "resource/page/corn-phenotype.jsp",
+              "icon": "fa fa-viacoin",
+              "target": "_self"
+            },
+            {
+              "title": "Image process",
+              "href": "resource/page/corn-phenotype2.jsp",
+              "icon": "fa fa-tags",
+              "target": "_self"
+            },
+            {
+              "title": "YOLOrot2.0",
+              "href": "resource/page/corn-phenotype3.jsp",
+              "icon": "fa fa-tags",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title":"Germination",
+          "href": "",
+          "icon": "fa fa-flag-o",
+          "target": "_self",
+          "child": [
+           
+            {
+              "title": "YOLO",
+              "href": "resource/page/corn-germinate.jsp",
+              "icon": "fa fa-viacoin",
+              "target": "_self"
+            },
+            {
+              "title": "IP",
+              "href": "resource/page/corn-germinate2.jsp",
+              "icon": "fa fa-tags",
+              "target": "_self"
+            },
+            {
+              "title": "SAM",
+              "href": "resource/page/corn-germinate3.jsp",
+              "icon": "fa fa-tags",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

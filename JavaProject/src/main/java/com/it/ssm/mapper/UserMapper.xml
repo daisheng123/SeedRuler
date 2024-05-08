@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间 引入那个接口 -->
+<mapper namespace="com.it.ssm.dao.UserDao">
+	<!--方法名与ID必须一致 -->
+	<!--parameterType 传入参数类型 -->
+	<!--resultType 返回值类型 -->
+
+	<select id="findUserList" resultType="com.it.ssm.entity.User">
+		select * from user
+		<where>
+			<if test="userName != null">
+				userName like concat ('%', #{userName}, '%')
+			</if>
+		</where>
+		order by id
+		limit #{pyl},#{pagesize}
+	</select>
+
+	<select id="login" resultType="com.it.ssm.entity.User">
+		select *from user where userName=#{userName} and password=#{password}
+	</select>
+
+	<delete id="deleteImages">
+		TRUNCATE TABLE images
+	</delete>
+
+	<delete id="deleteCornCount">
+		TRUNCATE TABLE corn_count
+	</delete>
+
+	<delete id="deleteCornGerminate">
+		TRUNCATE TABLE corn_germinate
+	</delete>
+
+	<delete id="deleteCornPhenotype">
+		TRUNCATE TABLE corn_phenotype
+	</delete>
+</mapper>

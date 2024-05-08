@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间 引入那个接口 -->
+<mapper namespace="com.it.ssm.dao.StatisticsDao">
+	<!--方法名与ID必须一致 -->
+	<!--parameterType 传入参数类型 -->
+	<!--resultType 返回值类型 -->
+
+	<select id="findCornCountList" resultType="com.it.ssm.entity.CornCount">
+		select corn_count.imageId,corn_count.cornId,corn_count.count,images.imageName,images.algorithm from corn_count ,images
+		<where>
+		     corn_count.imageId=images.id 
+			<if test="imageName != null"> 
+				and images.imageName like concat ('%', #{imageName}, '%')
+			</if>
+		</where>
+	order by corn_count.imageId
+	limit #{pyl},#{pagesize}
+	</select>
+	
+	<select id="findCornPhenotypeList" resultType="com.it.ssm.entity.CornPhenotype">
+		select corn_phenotype.imageId,corn_phenotype.cornId,corn_phenotype.heigth,corn_phenotype.width,corn_phenotype.lengthwidthratio,corn_phenotype.area,corn_phenotype.perimeter,images.imageName,images.algorithm from corn_phenotype,images
+		<where>
+		corn_phenotype.imageId=images.id 
+			<if test="imageName != null">
+				and images.imageName like concat ('%', #{imageName}, '%')
+			</if>
+		</where>
+		order by corn_phenotype.imageId
+		limit #{pyl},#{pagesize}
+	</select>
+	
+	<select id="findCornGerminateList" resultType="com.it.ssm.entity.CornGerminate">
+		select corn_germinate.imageId,corn_germinate.sumCount,corn_germinate.germinationCount,corn_germinate.germinationRate,images.imageName,images.algorithm,corn_germinate.nogerminationCount from corn_germinate,images
+		<where>
+		corn_germinate.imageId=images.id 
+			<if test="imageName != null">
+				and images.imageName like concat ('%', #{imageName}, '%')
+			</if>
+		</where>
+		order by corn_germinate.imageId
+		limit #{pyl},#{pagesize}
+	</select>
+	
+	<select id="findCornPhenotypeCount" resultType="Integer">
+	select count(corn_phenotype.imageId) from corn_phenotype,images
+	     <where>
+	     corn_phenotype.imageId=images.id 
+			<if test="imageName != null">
+				and images.imageName like concat ('%', #{imageName}, '%')
+			</if>
+		</where>
+	</select>
+	
+	<select id="findCornGerminateCount" resultType="Integer">
+	select count(corn_germinate.imageId) from corn_germinate,images
+	     <where>
+	      corn_germinate.imageId=images.id 
+			<if test="imageName != null">
+				and images.imageName like concat ('%', #{imageName}, '%')
+			</if>
+		</where>
+	</select>
+	
+	<select id="findCornCount" resultType="Integer">
+	select count(corn_count.imageId) from corn_count,images
+	     <where>
+	        corn_count.imageId=images.id
+			<if test="imageName != null">
+				and images.imageName like concat ('%', #{imageName}, '%')
+			</if>
+		</where>
+	</select>
+
+</mapper>
