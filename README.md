@@ -6,10 +6,23 @@ We are dedicated to the in-depth exploration of automated evaluation of rice see
 ## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
 ### CUDA Environment
-If you are running this project using GPU, please configure CUDA and cuDNN according to this version.<br/
+If you are running this project using GPU, please configure CUDA and cuDNN according to this version.<br/>
+
 |     | Version  |
 |  ----  | ----  |
 | CUDA  | 11.8 |
+
+### Package Environment
+This project is based on Python 3.8. The required environment is as follows:<br>
+
+|     | Version  |
+|  ----  | ----  |
+| numpy  | 1.18.5 |
+| opencv-python  |  |
+| torch  | 1.7.1 |
+| torchvision  | 0.8.1 |
+| fvcore  |  |
+| scipy  | 1.4.1 |
 
 
 ## Configuration - 配置（配置信息。）
